@@ -1,0 +1,151 @@
+body{
+	display				: flex				;
+	justify-content		: center			;
+	flex-direction		: row				;
+	margin				: 0					;
+	padding				: 0					;
+	font-size			: 16px				;
+	background			:  url(background.jpg);
+	width				: 100vw				;
+	height				: 100vh				;
+	overflow			: hidden			;
+	z-index				: -1				;
+}
+.background img{
+	opacity				: 0.5				;
+	top					: 0px				;
+	z-index				: 0					;
+}
+.fade {
+	display				: flex				;
+	position			: absolute			;
+	width				: 100vw				;
+	min-height			: 100vh				;
+	top					: 0					;
+	background			: black				;
+	opacity				: 0					;
+	justify-content		: center			;
+
+	animation			: fade 6s linear	;
+	animation-iteration-count: 1			;
+	z-index				: 3					;
+}
+.fade p{
+	margin-top			: 40vh				;
+	line-height			: 1.35em			;
+	font-size			: 3em				;
+	font-family			: 'Pathway Gothic One', sans-serif;
+	color				: #0b6577			;
+}
+.zoom {
+	display				: flex				;
+	position			: absolute			;
+	opacity				: 0					;
+	justify-content		: center			;
+	animation			: zoom 12s linear	;
+	animation-delay		: 7.8s				;
+	animation-iteration-count: 1			;
+	z-index				: 999				;
+}
+.zoom img{
+	width				: 120%				;
+	height				: 120%				;
+}
+
+.star-wars {
+	display				: flex				;
+	justify-content		: center			;
+	position			: relative			;
+	height				: 600px			;
+	color				: #ffba08			;
+	font-family			: 'Pathway Gothic One', sans-serif;
+    -webkit-transform	: scaleX(1.9)		;
+	font-size			: 6em				;
+	font-weight			: 600				;
+	letter-spacing		: 0.25rem			;
+	line-height			: 120%				;
+	perspective			: 150px				;
+	text-align			: justify			;
+	z-index				: 1					;
+}
+
+.crawl {
+	position			: relative			;
+	top					: 9999px			;
+	transform-origin	: 50% 100%			;
+	animation			: crawl 80s linear	;
+}
+
+.crawl > p {
+	width				: 16em				;
+	text-align			: justify			;
+    display				: block				;
+    margin-block-start	: 0em				;
+    margin-block-end	: 0em				;
+    margin-inline-start	: 0em				;
+    margin-inline-end	: 0em				;
+}
+
+.crawl > .title {
+	font-size			: 90%				;
+	text-align			: center			;
+}
+.crawl > .title prefix {
+	font-size			: 800vh			;
+	color				: rgba(0,0,0,0)		;
+}
+.crawl > .title h1 {
+    -webkit-transform	: scaleX(0.5)		;
+	font-size			: 200%				;
+	margin				: 0 0 100px			;
+	text-transform		: uppercase			;
+	text-align			: center			;
+	margin-inline-start	: -100%				;
+	margin-inline-end	: -100%				;
+}
+
+@keyframes crawl {
+	0% {
+		top				: 1200				;
+		transform		: rotateX(25deg)translateZ(0);
+	}
+	22% {
+		top				: 1200				;
+		transform		: rotateX(25deg)translateZ(0);
+	}
+	75% {
+		opacity			: 0.8					;
+		top				: -4000px				;
+		transform		: rotateX(25deg) translateZ(-1800px);
+	}
+	100% {
+		opacity			: 0					;
+		top				: -6000px			;
+		transform		: rotateX(25deg) translateZ(-2500px);
+	}
+}
+@keyframes fade {
+	0% {
+		opacity			: 1					;
+	}
+	93% {
+		opacity			: 1					;
+	}
+	100% {
+		opacity			: 0					;
+	}
+}
+@keyframes zoom {
+	0% {
+		top				: -20%				;
+		width			: 120%				;
+		height			: 120%				;
+		opacity			: 1					;
+	}
+	100% {
+		top				: 50%				;
+		width			: 0%				;
+		height			: 0%				;
+		opacity			: 0.1				;
+	}
+}
