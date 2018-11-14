@@ -113,10 +113,10 @@ body{
 		top				: 1200				;
 		transform		: rotateX(25deg)translateZ(0);
 	}
-	80% {
-		opacity			: 1					;
-		top				: -4800px			;
-		transform		: rotateX(25deg) translateZ(-2500px);
+	75% {
+		opacity			: 0.8					;
+		top				: -4000px				;
+		transform		: rotateX(25deg) translateZ(-1800px);
 	}
 	100% {
 		opacity			: 0					;
